@@ -946,21 +946,6 @@ export const state = () => {
                     }
                 },
                 {
-                    name: 'SSR/V2ray 配置解析',
-                    search_keys: 'ssr v2ray config',
-                    icon: '#icon-vpn',
-                    path: '/tools/devops/ssr_decode',
-                    recommend: false,
-                    head: {
-                        keywords: [
-                            'SSR配置解密',
-                            'SS配置解密',
-                            'V2ray配置解密'
-                        ],
-                        description: '在线SSR配置解析'
-                    }
-                },
-                {
                     name: '无类别域间路由(CIDR)计算',
                     search_keys: 'CIDR(Classless Inter-Domain Routing)',
                     path: '/tools/devops/cidr',
@@ -1114,9 +1099,8 @@ export const state = () => {
                 tool.head = head;
             }
 
-            head.title = `${tool.head.title ? tool.head.title : tool.name} - ${
-                process.env.title
-            }`;
+            head.title = `${tool.head.title ? tool.head.title : tool.name} - ${process.env.title
+                }`;
             if (tool.head.other) {
                 head.meta = head.meta.concat(tool.head.other);
             }
